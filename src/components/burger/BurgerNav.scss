@@ -1,10 +1,11 @@
-.burger {
+@use '../../App.scss' as v;
+.navigation {
     &__checkbox {
         display: none;
     }
 
     &__button {
-        background-color: #eee;
+        background-color: v.$color-offwhite;
         height: 7rem;
         width: 7rem;
         position: fixed;
@@ -12,7 +13,7 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1rem 3rem rgba(v.$color-offblack, 0.1);
         text-align: center;
         cursor: pointer;
     }
@@ -24,12 +25,13 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient(lightyellow, yellow);
+        background-image: radial-gradient(v.$color-offwhite,
+                v.$color-offblack );
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
     }
 
-    &__bur {
+    &__nav {
         height: 100vh;
         position: fixed;
         top: 0;
@@ -38,7 +40,7 @@
 
         opacity: 0;
         width: 0;
-        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     &__list {
@@ -56,42 +58,44 @@
     }
 
     &__link {
+
         &:link,
         &:visited {
             display: inline-block;
             font-size: 3rem;
             font-weight: 300;
             padding: 1rem 2rem;
-            color: #eee;
+            color: v.$color-offblack;
+            text-decoration: none;
             text-transform: uppercase;
-
-            background-image: linear-gradient(
-                120deg,
-                transparent 0%,
-                transparent 50%,
-                #eee 50%
-              );
-              background-size: 225%;
-              transition: all 0.4s;
+            background-image: linear-gradient(120deg,
+                    transparent 0%,
+                    transparent 50%,
+                    v.$color-offwhite 50%);
+            background-size: 225%;
+            transition: all 0.4s;
         }
 
         &:hover,
         &:active {
             background-position: 100%;
-            color: darkslategray;
+            color: v.$color-tertiary-light;
             transform: translateX(1rem);
         }
     }
 
-    &__checkbox:checked ~ &__background {
+    //FUNCTIONALITY
+
+    &__checkbox:checked~&__background {
         transform: scale(80);
     }
 
-    &__checkbox:checked ~ &__bur {
+    &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
     }
 
+    //ICON
     &__icon {
         position: relative;
         margin-top: 3.5rem;
@@ -101,7 +105,7 @@
         &::after {
             width: 3rem;
             height: 2px;
-            background-color: #333;
+            background-color: v.$color-dark-gary;
             display: inline-block;
         }
 
@@ -116,6 +120,7 @@
         &::before {
             top: -0.8rem;
         }
+
         &::after {
             top: 0.8rem;
         }
@@ -129,16 +134,16 @@
         top: 1rem;
     }
 
-    &__checkbox:checked + &__button &__icon {
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
 
-    &__checkbox:checked + &__button &__icon::before {
+    &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
 
-    &__checkbox:checked + &__button &__icon::after {
+    &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }

@@ -1,29 +1,26 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import './BurgerNav.scss';
 
 function BurgerNav() {
-  const [toggleMenu, setShowMenu] = useState(false);
-
   return (
     <>
-    <div className='burger'>
-      <input type='checkbox' className='burger__checkbox' id='bur-toggle' />
+    <div className="navigation">
+            <input type="checkbox" className="navigation__checkbox" id="navi-toggle" />
+            
+            <label htmlFor="navi-toggle" className="navigation__button">
+                <span className="navigation__icon">&nbsp;</span>
+            </label>
+            
+            <div className="navigation__background">&nbsp;</div>
 
-      <label htmlFor='bur-toggle' className='burger__button'>
-        <span className='burger__icon'>&nbsp;</span>
-      </label>
-
-      <div className='burger__background'>&nbsp;</div>
-
-      <nav className='burger__nav'>
-          <ul className='burger__list'>
-            <li className='burger__item'><Link to='' className='burger__link'>About me</Link></li>
-            <li className='burger__item'><Link to='' className='burger__link'>Projects</Link></li>
-            <li className='burger__item'><Link to='' className='burger__link'>Contact</Link></li>
-          </ul>
-      </nav>
-    </div>
+            <nav className="navigation__nav">
+                <ul className="navigation__list">
+                <li className='navigation__item'><Link to='/about' className='navigation__link'>About me</Link></li>
+                <li className='navigation__item'><Link to='/projects' className='navigation__link'>Projects</Link></li>
+                <li className='navigation__item'><Link to='/contact' className='navigation__link'>Contact</Link></li>
+                </ul>
+            </nav>
+        </div>
     </>
   )
 }

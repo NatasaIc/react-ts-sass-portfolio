@@ -1,0 +1,77 @@
+@use '../../App.scss' as v;
+
+.footer {
+    background-color: v.$color-dark-gary;
+    padding: 10rem 0;
+    font-size: 1.2rem;
+    color: v.$color-grey-light-1;
+
+    p {
+        display: inline-block;
+        margin-left: 26%;
+
+        @include v.md {
+            margin-left: 50%;
+        }
+        @include v.lg {
+        margin-left: 45%;
+        }
+        @include v.xl {
+         margin-left: 40%;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    &__icon {
+        padding: .5rem;
+        font-size: 2rem;
+        color: v.$color-grey-light-2;
+
+        &:hover {
+            color: v.$color-tertiary-light;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: v.$color-grey-light-1;
+            background-color: v.$color-dark-gary;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+            color: v.$color-offwhite;
+            box-shadow: 0 1rem 2rem rgba(v.$color-offblack, 0.4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid v.$color-light-grey;
+        padding-top: 2rem;
+        width: 70%;
+        float: right;
+
+        @include v.md {
+        width: 50%;
+        padding-top: 5rem;
+        }
+        @include v.lg {
+        width: 55%;
+        padding-top: 6rem;
+        }
+        @include v.xl {
+            width: 60%;
+        }
+    }
+}

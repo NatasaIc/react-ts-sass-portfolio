@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/**********COLORS**********/
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+$color-tertiary-light: #2998ff;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-light-grey: #777;
+$color-gray: #999;
+$color-dark-gary: #333;
+
+$color-offwhite: #fff;
+$color-offblack: #2C2F33;
+
+$default-font-size: 1.6rem;
+
+/**********GRID**********/
+$grid-width: 114rem;
+$gutter-vertical: 15rem;
+$gutter-horizontal: 3rem;
+$gutter-horizontal-small: 1rem;
+$margin-top-huge: 10rem;
+
 *,
 *::after *::before {
   margin: 0;
@@ -12,7 +36,15 @@ html {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-light-grey;
+  padding: 0;
   box-sizing: border-box;
+  @media screen and (min-width: 720px) {
+    padding: 3rem;
+  }
 }
 
 ul {
@@ -23,37 +55,8 @@ a {
   text-decoration: none;
 }
 
-// COLORS
-$color-primary-dark-blue: #16213e;
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-light-grey: #777;
-$color-gray: #999;
-$color-dark-gary: #333;
-
-$color-offwhite: #fff;
-$color-offblack: #000;
-
-// FONT
-$default-font-size: 1.6rem;
-
-// GRID
-$grid-width: 114rem;
-$gutter-vertical: 8rem;
-$gutter-horizontal: 6rem;
-$margin-top-huge: 10rem;
-
+/**********MARGINS**********/
 .u-center-text {
   text-align: center !important;
 }
@@ -77,14 +80,14 @@ $margin-top-huge: 10rem;
   margin-top: $margin-top-huge !important;
 }
 
-//TYPOGRAPHY
+/**********TYPOGRAPHY**********/
 .heading-secondary {
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  letter-spacing: 2px;
-  text-shadow: 0.5rem 1rem 2rem #000 0.2;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
 }
 
 .heading-tertiary {
@@ -96,82 +99,23 @@ $margin-top-huge: 10rem;
 .paragraph {
   font-size: 1.6rem;
   &:not(:last-child) {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
   }
 }
 
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
-//GRID
-.row {
-  max-width: $grid-width;
-  margin: 0 auto;
-  margin-bottom: $gutter-vertical;
-
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
-
-        @include clearfix;
-
-  [className^="col-"] {
-    float: left;
-
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
-  }
-
-  .col-1-of-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
-  }
-
-  .col-1-of-3 {
-    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-  }
-
-  .col-2-of-3 {
-    width: calc(
-      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
-    );
-  }
-
-  .col-1-of-4 {
-    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-  }
-
-  .col-2-of-4 {
-    width: calc(
-      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
-    );
-  }
-
-  .col-3-of-4 {
-    width: calc(
-      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
-    );
-  }
-}
-
-//BUTTON
+/**********BUTTON**********/
 .btn {
   &,
   &:link,
   &:visited {
-    text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 4rem;
+    padding: 1rem 3rem;
     display: inline-block;
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-    font-size: $default-font-size;
+    font-size: 1.5rem;
 
     //Change for the <button> element
     border: none;
@@ -183,7 +127,7 @@ $margin-top-huge: 10rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
     &::after {
-      transform: scaleX(1.4) scaleY(1.6);
+      transform: scaleX(1.2) scaleY(1);
       opacity: 0;
     }
   }
@@ -194,65 +138,86 @@ $margin-top-huge: 10rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 
+  &--dark {
+    margin-top: 4rem;
+    margin-left: 5rem;
+    background: $color-grey-light-2;
+    color: $color-tertiary-light;
+    &:hover {
+      color: $color-grey-light-2;
+      background: $color-offblack;
+    }
+  }
+
   &--white {
-    background-color: $color-offwhite;
-    color: $color-light-grey;
-
-    &::after {
-      background-color: $color-offwhite;
+    color: $color-offwhite;
+    &:hover {
+      background: $color-grey-light-1;
+      color: $color-tertiary-light;
     }
   }
 
-  &--green {
-    background-color: $color-primary;
-    color: $color-offwhite;
-    margin-top: 2.5rem;
-
-    &::after {
-      background-color: $color-offwhite;
-    }
-  }
-}
-
-.btn-text {
-
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $color-primary-light;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid $color-primary-light;
-    padding: 3px;
-    transition: all 0.2s;
-  }
-
-  &:hover {
-    background-color: $color-primary-light;
-    color: $color-offwhite;
-    box-shadow: 0 1rem 2rem rgba(22, 33, 62, 0.15);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    box-shadow: 0 0.5rem 1rem rgba(22, 33, 62, 0.15);
-    transform: translateY(0);
+  &--blue {
+    float: right;
+    color: $color-offblack;
+    border-style: none;
+    &:hover {
+        background: $color-tertiary-light;
+        color: #fff;
+        text-shadow: none;
+        box-shadow: none;
+        transform: none;
+        border: none;
+      }
   }
 }
 
 
-/*BREAKPOINTS*/
-/*SMALL*/
-@media screen and (max-width: 350px) {
+/**********BREAKPOINTS**********/
+
+$breakpoints: (
+  "xs": 0px,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+
+/**********MIXINS**********/
+
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
 }
 
-/*MEDIUM*/
-@media screen and (max-width: 576px) {
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
 }
 
-/*LARGE*/
-@media screen and (max-width: 992px) {
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
 }
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+ @mixin xxl {
+   @media (min-width: map-get($breakpoints, "xxl")) {
+     @content;
+   }
+  }

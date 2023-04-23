@@ -1,15 +1,33 @@
 @use "../../App.scss" as v;
+.section-about {
+  margin-top: -20vh;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom,
+      rgba(v.$color-offblack, 1),
+      rgba(v.$color-offblack, 0.7));
+  text-align: left;
+  padding: 25rem 5rem 25rem 5rem;
+  transform: skewY(-7deg);
 
-body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
+
+  &>* {
+    transform: skewY(7deg);
+  }
 }
 
-.section-about {
-    background-color: v.$color-grey-light-1;
-    padding: 25rem 0;
-    margin-top: -20vh;
+.paragraph-about{
+  word-spacing: 0.5rem;
+
+  @include v.md {
+    padding: 0 10rem;
   }
+  @include v.lg {
+    padding: 0 20rem;
+  }
+  @include v.xl {
+   padding: 0 30rem;
+  }
+  @include v.xxl {
+    padding: 0 50rem;
+  }
+}
