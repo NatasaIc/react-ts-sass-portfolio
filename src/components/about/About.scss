@@ -1,18 +1,27 @@
 @use "../../App.scss" as v;
 .section-about {
-  margin-top: -20vh;
-  padding: 20rem 0;
   background-image: linear-gradient(to right bottom,
       rgba(v.$color-offblack, 1),
       rgba(v.$color-offblack, 0.7));
   text-align: left;
   padding: 25rem 5rem 25rem 5rem;
+  margin-top: -13rem;
   transform: skewY(-7deg);
 
 
   &>* {
     transform: skewY(7deg);
   }
+
+    .telegram-social {
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
+      margin-top: 3rem;
+    &:hover {
+      color: v.$color-tertiary-light;
+    }
+    }
 }
 
 .paragraph-about{

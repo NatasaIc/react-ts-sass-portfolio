@@ -16,6 +16,9 @@
         box-shadow: 0 1rem 3rem rgba(v.$color-offblack, 0.1);
         text-align: center;
         cursor: pointer;
+        @include v.xl {
+            visibility: hidden;
+        }
     }
 
     &__background {
@@ -25,10 +28,14 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient(v.$color-offwhite,
-                v.$color-offblack );
+        background-color: v.$color-secondary-light;
+        // background-image: radial-gradient(#659DBD,
+        //         v.$color-tertiary-light );
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+        @include v.xl {
+             visibility: hidden;
+        }
     }
 
     &__nav {
@@ -41,6 +48,12 @@
         opacity: 0;
         width: 0;
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        @include v.xl {
+            opacity: 1;
+            display: flex;
+            flex-direction: row;
+            top: -20rem;
+        }
     }
 
     &__list {
@@ -51,6 +64,11 @@
         list-style: none;
         text-align: center;
         width: 100%;
+        @include v.xl {
+            display: flex;
+            top: 35%;
+            margin-left: 130rem;
+        }
     }
 
     &__item {
@@ -74,12 +92,18 @@
                     v.$color-offwhite 50%);
             background-size: 225%;
             transition: all 0.4s;
+            @include v.xl {
+                font-size: 2rem;
+                font-weight: 500;
+                background-size: 260%;
+                
+            }
         }
 
         &:hover,
         &:active {
             background-position: 100%;
-            color: v.$color-tertiary-light;
+            color: v.$color-offblack;
             transform: translateX(1rem);
         }
     }
@@ -99,7 +123,6 @@
     &__icon {
         position: relative;
         margin-top: 3.5rem;
-
         &,
         &::before,
         &::after {
@@ -147,4 +170,5 @@
         top: 0;
         transform: rotate(-135deg);
     }
+    
 }

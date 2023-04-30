@@ -1,9 +1,8 @@
 @use "../../App.scss" as v;
 .section-projects {
     background-color: v.$color-grey-light-1;
-    padding: 25rem 0 5rem 0;
+    padding-top: 25rem;
     margin-top: -15rem;
-    margin-bottom: -35rem;
 }
 
 .col-1-of-3 {
@@ -14,7 +13,7 @@
     column-gap: 1rem;
 
     @include v.md {
-    padding: 8rem;
+    padding: 5rem;
     }
     @include v.lg {
         grid-template-columns: repeat(2, 450px);
@@ -31,7 +30,7 @@
     
 
     &:last-child {
-        margin-bottom: 40rem;
+        margin-bottom: 25rem;
     }
     &__side {
         color: #fff;
@@ -44,12 +43,14 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        border-radius: 3px;
+        border-radius: 6px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba(v.$color-offblack, 0.15);
 
         &--front {
-            background-color: v.$color-offwhite;
+            background-image: linear-gradient(to right bottom,
+                        rgba(v.$color-tertiary-dark, .85),
+                        rgba(v.$color-tertiary-light, .85));
         }
 
         &--back {
@@ -57,8 +58,8 @@
 
             &-1 {
                 background-image: linear-gradient(to right bottom,
-                        v.$color-grey-light-1,
-                        v.$color-tertiary-light );
+                            rgba(v.$color-tertiary-dark, .85),
+                            rgba(v.$color-tertiary-light, .85));
             }
         }
     }
@@ -84,10 +85,10 @@
 
     &__heading {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
         text-align: right;
-        color: v.$color-tertiary-light;
+        color: v.$color-offwhite;
         position: absolute;
         top: 12rem;
         right: 2rem;
@@ -98,10 +99,16 @@
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                        rgba(v.$color-tertiary-dark, .85),
+                        rgba(v.$color-tertiary-light, .85));
+        }
     }
 
     &__details {
-        color: v.$color-offblack;
+        color: v.$color-grey-light-2;
         margin-right: 5%;
 
         ul {
@@ -139,14 +146,14 @@
 
     .type {
         position: absolute;
-        top: 79%;
+        top: 78%;
         left: 60%;
         font-weight: 400;
     }
 
     .handle {
         position: absolute;
-        top: 90%;
+        top: 88%;
         left: 60%;
         font-weight: 400;
     }

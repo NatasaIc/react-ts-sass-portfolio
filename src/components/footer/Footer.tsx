@@ -18,15 +18,6 @@ const Footer = () => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <AiFillInstagram />
-                    </Link>
-
-                    <Link
-                        to="https://github.com/NatasaIc"
-                        className="footer__icon"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
                         <AiFillGithub />
                     </Link>
 

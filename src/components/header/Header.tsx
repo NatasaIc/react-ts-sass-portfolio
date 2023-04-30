@@ -1,4 +1,3 @@
-import { AiOutlineDownload } from 'react-icons/ai';
 import './Header.scss';
 import Social from '../socials/Social';
 
@@ -11,8 +10,8 @@ function Header() {
         <div className='header__text-box'>
             <h1 className='heading-primary'>
                 <span className='heading-primary--main'>Natasa Iconomou</span>
-                <span className='heading-primary--sub'> I'm a web developer based in Stockholm,
-                and I'm very passionate and dedicated to my work.</span>
+                <span className='heading-primary--sub'> I'm a web developer student. Born and raised in Stockholm Sweden.<br /><br />
+                Currently in a state of improving and obtaining the necessary skills for me to become the best developer possible.</span>
             </h1>
             <a href="https://github.com/NatasaIc/fullstack-applikation-express.git" className="btn btn--dark">Download CV</a>
         </div>

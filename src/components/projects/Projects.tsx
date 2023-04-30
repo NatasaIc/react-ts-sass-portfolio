@@ -25,7 +25,7 @@ function Projects() {
                                 <div className="card__details">
                                     <ul>
                                         <li>HTML <div className="html">{projectData.html}</div></li>
-                                        <li>CSS/SCSS <div className="css">{projectData.css}</div></li>
+                                        <li>SASS <div className="css">{projectData.css}</div></li>
                                         <li>TYPESCRIPT <div className="type">{projectData.typescript}</div></li>
                                         <li>HANDLEBARS <div className="handle">{projectData.handlebars}</div></li>
                                     </ul>

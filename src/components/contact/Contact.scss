@@ -1,18 +1,15 @@
 @use '../../App.scss' as v;
 
 .section-contact{
-    padding: 25rem 5rem 25rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10rem 5rem 10rem 5rem;
     background-color: v.$color-grey-light-1;
     background: linear-gradient(to right bottom,
                 rgba(v.$color-offblack, 1),
                 rgba(v.$color-offblack, 0.8));
-        -webkit-clip-path: polygon(0 0, 100% 30%, 100% 50%, 100% 99%, 25% 100%, 0 100%);
-        clip-path: polygon(0 12%,
-                100% 0,
-                100% 100%,
-                100% 100%,
-                100% 100%,
-                0 100%);
 }
 
 .container {
@@ -21,15 +18,12 @@
     align-items: center;
     margin-bottom: 0;
     .heading-secondary {
-    margin-top: 40%;
-
     @include v.xl {
-    margin-top: 20%;
+    padding: 0;
     }
     }
 
 .contact-form {
-    width: 100%;
     ul {
         padding: 0;
         margin: 0;

@@ -4,6 +4,7 @@
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 $color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
@@ -122,18 +123,18 @@ a {
     cursor: pointer;
   }
 
-  &:hover {
+  &:hover:not(&--blue) {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
     &::after {
       transform: scaleX(1.2) scaleY(1);
-      opacity: 0;
+      opacity: 1;
     }
   }
 
   &:active,
-  &:focus {
+  &:focus:not(&--blue) {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
@@ -161,14 +162,10 @@ a {
     float: right;
     color: $color-offblack;
     border-style: none;
+    border: 1px solid $color-tertiary-light;
     &:hover {
-        background: $color-tertiary-light;
-        color: #fff;
-        text-shadow: none;
-        box-shadow: none;
-        transform: none;
-        border: none;
-      }
+      color: $color-tertiary-light;
+    }
   }
 }
 
@@ -176,7 +173,6 @@ a {
 /**********BREAKPOINTS**********/
 
 $breakpoints: (
-  "xs": 0px,
   "sm": 480px,
   "md": 720px,
   "lg": 960px,
