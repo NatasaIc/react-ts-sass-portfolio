@@ -1,33 +1,32 @@
 import React from "react";
 import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { Link } from "react-router-dom";
 
 function Social() {
   return (
     <div className="header__social">
-      <Link 
-      to='/contact'>
+      <a
+      href='#contact'>
       <FaTelegramPlane className='header__social-icon'/>
-      </Link>
+      </a>
 
-      <Link
-        to="https://github.com/NatasaIc"
+      <a
+        href="https://github.com/NatasaIc"
         className="header__social-icon"
         target="_blank"
         rel="noreferrer"
       >
         <AiFillGithub />
-      </Link>
+      </a>
 
-      <Link
-        to="https://www.linkedin.com/in/natasa-iconomou-066b6125a/"
+      <a
+        href="https://www.linkedin.com/in/natasa-iconomou-066b6125a/"
         className="header__social-icon"
         target="_blank"
         rel="noreferrer"
       >
         <AiOutlineLinkedin />
-      </Link>
+      </a>
     </div>
   );
 }

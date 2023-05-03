@@ -4,14 +4,13 @@ import Social from '../socials/Social';
 function Header() {
   return (
     <>
-    <header className='header'>
+    <header className='header' id="home">
     <Social />
     <div className="header__img"></div>
         <div className='header__text-box'>
             <h1 className='heading-primary'>
                 <span className='heading-primary--main'>Natasa Iconomou</span>
-                <span className='heading-primary--sub'> I'm a web developer student. Born and raised in Stockholm Sweden.<br /><br />
-                Currently in a state of improving and obtaining the necessary skills for me to become the best developer possible.</span>
+                <span className='heading-primary--sub'> I'm a Software developer student, born and raised in Stockholm Sweden.</span>
             </h1>
             <a href="https://github.com/NatasaIc/fullstack-applikation-express.git" className="btn btn--dark">Download CV</a>
         </div>

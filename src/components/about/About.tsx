@@ -1,12 +1,11 @@
 import './About.scss';
 import '../../App.scss';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <>
-    <section className='section-about'>
+    <section className='section-about' id="about">
     <div className='u-center-text  u-margin-bottom-medium'>
       <h2 className='heading-secondary heading-about'>
         A litle somthing about me
@@ -19,16 +18,18 @@ export default function About() {
         I'm a web developer student at Medieinstitutet. The program lasts 2 years. 
          I will have knowledge in 
          HTML, CSS/SCSS, JavaScript, TypeScript, React, 
-         SQL, Git, Node.js and PHP.<br/><br/>
+         Database, Git, Node.js and PHP.
+         Currently in a state of improving and obtaining the necessary 
+         skills for me to become the best developer possible.
          My philosophy has always been,
          self-editing, non-stop learning and humility are 
-         key to my practice.
+         key to my practice.<br /><br />
          I am currently applying for LIA internship for the following periods:<br />
          LIA 1: 2023-10-16 to 2023-12-24<br />
          LIA 2: 2024-02-05 to 2024-05-19<br /> <br />
          If you run a company or work for a company that is 
          looking for interns do not hesitate to get in touch.
-          <Link to='/contact'><FaTelegramPlane className='telegram-social'/></Link>
+          <a href='#contact'><FaTelegramPlane className='telegram-social'/></a>
         </p>
       </div>
     </div>

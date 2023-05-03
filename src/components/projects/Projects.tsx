@@ -6,7 +6,7 @@ function Projects() {
     const project = projectData.getAllProjects();
   return (
     <>
-             <section className="section-projects">
+             <section className="section-projects" id="projects">
                 <div className="u-center-text">
                     <h2 className="heading-secondary">
                         Projects

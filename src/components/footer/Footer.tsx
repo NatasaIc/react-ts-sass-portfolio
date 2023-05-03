@@ -1,12 +1,12 @@
 
 import './Footer.scss';
 import { Link } from 'react-router-dom';
-import { AiFillGithub, AiFillInstagram, AiOutlineLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer" id="footer">
             <div className="row">
                 <div className="col-1-of-2">
                     <div className="footer__icons">

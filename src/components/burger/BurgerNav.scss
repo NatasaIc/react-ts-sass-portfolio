@@ -16,7 +16,7 @@
         box-shadow: 0 1rem 3rem rgba(v.$color-offblack, 0.1);
         text-align: center;
         cursor: pointer;
-        @include v.xl {
+        @include v.lg {
             visibility: hidden;
         }
     }
@@ -33,7 +33,7 @@
         //         v.$color-tertiary-light );
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-        @include v.xl {
+        @include v.lg {
              visibility: hidden;
         }
     }
@@ -48,7 +48,7 @@
         opacity: 0;
         width: 0;
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        @include v.xl {
+        @include v.lg {
             opacity: 1;
             display: flex;
             flex-direction: row;
@@ -64,10 +64,10 @@
         list-style: none;
         text-align: center;
         width: 100%;
-        @include v.xl {
+        @include v.lg {
             display: flex;
             top: 35%;
-            margin-left: 130rem;
+            margin-left: 70rem;
         }
     }
 
@@ -92,7 +92,7 @@
                     v.$color-offwhite 50%);
             background-size: 225%;
             transition: all 0.4s;
-            @include v.xl {
+            @include v.lg {
                 font-size: 2rem;
                 font-weight: 500;
                 background-size: 260%;
