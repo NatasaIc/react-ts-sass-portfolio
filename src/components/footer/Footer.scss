@@ -11,7 +11,7 @@
         margin-left: 26%;
 
         @include v.md {
-            margin-left: 50%;
+        margin-left: 50%;
         }
         @include v.lg {
         margin-left: 45%;
@@ -23,6 +23,7 @@
 
     &__icons {
         display: flex;
+        margin-top: 1rem;
         margin-left: 20px;
     }
 

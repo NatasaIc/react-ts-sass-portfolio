@@ -29,8 +29,8 @@ export default function About() {
          LIA 2: 2024-02-05 to 2024-05-19<br /> <br />
          If you run a company or work for a company that is 
          looking for interns do not hesitate to get in touch.
-          <a href='#contact'><FaTelegramPlane className='telegram-social'/></a>
         </p>
+        <a href='#contact'><FaTelegramPlane className='telegram-social'/></a>
       </div>
     </div>
 </section>

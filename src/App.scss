@@ -28,7 +28,6 @@ $margin-top-huge: 10rem;
 *::after *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
@@ -37,12 +36,12 @@ html {
 }
 
 body {
+  padding: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: $color-light-grey;
-  padding: 0;
-  box-sizing: border-box;
+  box-sizing:border-box;
   @media screen and (min-width: 720px) {
     padding: 3rem;
   }
@@ -163,6 +162,7 @@ a {
     color: $color-offblack;
     border-style: none;
     border: 1px solid $color-tertiary-light;
+    background-color: transparent;
     &:hover {
       color: $color-tertiary-light;
     }
@@ -181,12 +181,6 @@ $breakpoints: (
 );
 
 /**********MIXINS**********/
-
-@mixin xs {
-  @media (min-width: map-get($breakpoints, "xs")) {
-    @content;
-  }
-}
 
 @mixin sm {
   @media (min-width: map-get($breakpoints, "sm")) {
