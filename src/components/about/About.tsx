@@ -1,6 +1,5 @@
 import './About.scss';
 import '../../App.scss';
-import { FaTelegramPlane } from 'react-icons/fa';
 
 export default function About() {
   return (
