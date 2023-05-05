@@ -1,0 +1,32 @@
+@use "./variables" as v;
+
+/**********MIXINS**********/
+@mixin sm {
+    @media (min-width: map-get(v.$breakpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: map-get(v.$breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: map-get(v.$breakpoints, "lg")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: map-get(v.$breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: map-get(v.$breakpoints, "xxl")) {
+        @content;
+    }
+}

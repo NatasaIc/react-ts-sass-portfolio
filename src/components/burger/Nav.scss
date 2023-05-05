@@ -1,5 +1,8 @@
-@use '../../App.scss' as v;
-.navigation {
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+
+
     // &__checkbox {
     //     display: none;
     // }
@@ -38,25 +41,23 @@
     //     }
     // }
 
-    &__nav {
+   .nav {
         display: flex;
         flex-direction: row;
-        position: fixed;
+        position: absolute;
         top: 5%;
         left: 50%;
+
         z-index: 1500;
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        @include v.md {
-            top: 8%;
-            }
-        @include v.lg {
-            top: 10%;
+        @include m.lg {
+            top: 15%;
         }
-    }
+ 
 
     &__list {
         display: flex;
-        transform: translate(-50%, -50%);
+        transform: translate(-55%, -50%);
         list-style: none;
         text-align: center;
         width: 100%;
@@ -83,7 +84,7 @@
                     v.$color-offwhite 50%);
             background-size: 235%;
             transition: all 0.4s;
-            @include v.lg {
+            @include m.lg {
                 font-size: 2rem;
                 font-weight: 500;
                 background-size: 260%;
@@ -98,7 +99,7 @@
             transform: translateX(1rem);
         }
     }
-
+   }
     //FUNCTIONALITY
 
     // &__checkbox:checked~&__background {
@@ -162,4 +163,3 @@
     //     transform: rotate(-135deg);
     // }
     
-}

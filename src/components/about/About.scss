@@ -1,12 +1,17 @@
-@use "../../App.scss" as v;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
 .section-about {
+  width: inherit;
   background-image: linear-gradient(to right bottom,
       rgba(v.$color-offblack, 1),
       rgba(v.$color-offblack, 0.7));
+      background-size: cover;
   text-align: left;
   padding: 25rem 5rem 25rem 5rem;
   margin-top: -13rem;
   transform: skewY(-7deg);
+  
 
 
   &>* {
@@ -22,21 +27,22 @@
       color: v.$color-tertiary-light;
     }
     }
-}
+
 
 .paragraph-about{
   word-spacing: 0.5rem;
 
-  @include v.md {
+  @include m.md {
     padding: 0 10rem;
   }
-  @include v.lg {
+  @include m.lg {
     padding: 0 20rem;
   }
-  @include v.xl {
+  @include m.xl {
    padding: 0 30rem;
   }
-  @include v.xxl {
+  @include m.xxl {
     padding: 0 50rem;
   }
+}
 }

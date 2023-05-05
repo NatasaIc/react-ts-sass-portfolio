@@ -1,24 +1,27 @@
-@use '../../App.scss' as v;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
 
 .section-contact{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 10rem 5rem 10rem 5rem;
-    background-color: v.$color-grey-light-1;
+    height: 50vh;
+    padding: 10rem 8rem 10rem 8rem;
     background: linear-gradient(to right bottom,
                 rgba(v.$color-offblack, 1),
                 rgba(v.$color-offblack, 0.8));
-}
+                
+
 
 .container {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
     .heading-secondary {
-    @include v.xl {
+    @include m.xl {
     padding: 0;
     }
     }
@@ -51,8 +54,8 @@
         }
     }
 
-    input[type='text'],
-    input[type='email'] {
+    input[type="text"],
+    input[type="email"] {
         width: 100%;
         border: 0;
         outline: none;
@@ -80,5 +83,6 @@
         margin-bottom: 1rem;
     }
 
+}
 }
 }

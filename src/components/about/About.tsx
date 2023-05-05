@@ -30,7 +30,6 @@ export default function About() {
          If you run a company or work for a company that is 
          looking for interns do not hesitate to get in touch.
         </p>
-        <a href='#contact'><FaTelegramPlane className='telegram-social'/></a>
       </div>
     </div>
 </section>

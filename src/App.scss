@@ -1,51 +1,27 @@
+@use "./styles/variables" as v;
+@use "./styles/mixins" as m;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
-/**********COLORS**********/
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-light-grey: #777;
-$color-gray: #999;
-$color-dark-gary: #333;
-
-$color-offwhite: #fff;
-$color-offblack: #2C2F33;
-
-$default-font-size: 1.6rem;
-
-/**********GRID**********/
-$grid-width: 114rem;
-$gutter-vertical: 15rem;
-$gutter-horizontal: 3rem;
-$gutter-horizontal-small: 1rem;
-$margin-top-huge: 10rem;
 
 *,
 *::after *::before {
   margin: 0;
   padding: 0;
+ box-sizing: inherit;
 }
 
-html {
+
+
+html, body {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: v.$color-light-grey;
+  background-color: v.$color-grey-light-1;
+  overflow-x: hidden;
 }
 
-body {
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-light-grey;
-  box-sizing:border-box;
-  @media screen and (min-width: 720px) {
-    padding: 3rem;
-  }
-}
+
 
 ul {
   list-style: none;
@@ -54,7 +30,6 @@ ul {
 a {
   text-decoration: none;
 }
-
 
 /**********MARGINS**********/
 .u-center-text {
@@ -66,18 +41,18 @@ a {
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: $gutter-horizontal !important;
+  margin-bottom: v.$gutter-horizontal !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: $gutter-vertical !important;
+  margin-bottom: v.$gutter-vertical !important;
 }
 
 .u-margin-top-big {
-  margin-top: $gutter-vertical !important;
+  margin-top: v.$gutter-vertical !important;
 }
 .u-margin-top-huge {
-  margin-top: $margin-top-huge !important;
+  margin-top: v.$margin-top-huge !important;
 }
 
 /**********TYPOGRAPHY**********/
@@ -139,75 +114,32 @@ a {
   }
 
   &--dark {
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-left: 5rem;
-    background: $color-grey-light-2;
-    color: $color-tertiary-light;
+    background: v.$color-grey-light-2;
+    color: v.$color-tertiary-light;
     &:hover {
-      color: $color-grey-light-2;
-      background: $color-offblack;
+      color: v.$color-grey-light-2;
+      background: v.$color-offblack;
     }
   }
 
   &--white {
-    color: $color-offwhite;
+    color: v.$color-offwhite;
     &:hover {
-      background: $color-grey-light-1;
-      color: $color-tertiary-light;
+      background: v.$color-grey-light-1;
+      color: v.$color-tertiary-light;
     }
   }
 
   &--blue {
     float: right;
-    color: $color-offblack;
+    color: v.$color-offblack;
     border-style: none;
-    border: 1px solid $color-tertiary-light;
+    border: 1px solid v.$color-tertiary-light;
     background-color: transparent;
     &:hover {
-      color: $color-tertiary-light;
+      color: v.$color-tertiary-light;
     }
   }
 }
-
-
-/**********BREAKPOINTS**********/
-
-$breakpoints: (
-  "sm": 480px,
-  "md": 720px,
-  "lg": 960px,
-  "xl": 1200px,
-  "xxl": 1600px,
-);
-
-/**********MIXINS**********/
-
-@mixin sm {
-  @media (min-width: map-get($breakpoints, "sm")) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media (min-width: map-get($breakpoints, "md")) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media (min-width: map-get($breakpoints, "lg")) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: map-get($breakpoints, "xl")) {
-    @content;
-  }
-}
-
- @mixin xxl {
-   @media (min-width: map-get($breakpoints, "xxl")) {
-     @content;
-   }
-  }
