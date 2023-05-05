@@ -3,8 +3,8 @@
 
 
 .footer {
-    height: 20vh;
-    padding: 10rem 10rem;
+    height: 25vh;
+    padding: 5rem 0;
     background-color: v.$color-dark-gary;
     font-size: 1.2rem;
     color: v.$color-grey-light-1;
@@ -27,12 +27,11 @@
 
     &__icons {
         display: flex;
-        margin-top: 1rem;
         margin-left: 20px;
     }
 
     &__icon {
-        padding: .5rem;
+        margin-left: 1rem;
         font-size: 2rem;
         color: v.$color-grey-light-2;
 
@@ -63,17 +62,16 @@
 
     &__copyright {
         border-top: 1px solid v.$color-light-grey;
-        padding-top: 2rem;
         width: 70%;
         float: right;
+        padding-top: 10rem;
 
         @include m.md {
         width: 50%;
-        padding-top: 5rem;
+        padding-top: 10rem;
         }
         @include m.lg {
         width: 55%;
-        padding-top: 6rem;
         }
         @include m.xl {
             width: 60%;

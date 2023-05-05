@@ -1,5 +1,5 @@
 import "./Header.scss";
-import Social from "../socials/Social";
+import Social from "./Social";
 
 function Header() {
   return (

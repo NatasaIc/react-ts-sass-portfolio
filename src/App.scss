@@ -3,10 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 *,
-*::after *::before {
-  margin: 0;
-  padding: 0;
- box-sizing: inherit;
+*::after, 
+*::before {
+margin: 0;
+padding: 0;
+box-sizing: inherit;
 }
 
 
@@ -17,8 +18,10 @@ html, body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   color: v.$color-light-grey;
-  background-color: v.$color-grey-light-1;
   overflow-x: hidden;
+  @include m.md {
+    padding: 3rem;
+  }
 }
 
 
@@ -114,7 +117,7 @@ a {
   }
 
   &--dark {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-left: 5rem;
     background: v.$color-grey-light-2;
     color: v.$color-tertiary-light;
