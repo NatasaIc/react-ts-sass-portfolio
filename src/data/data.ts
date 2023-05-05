@@ -22,24 +22,6 @@ export const projects = [
       typescript: "30.5%",
       handlebars: "23.6%",
     },
-    // {
-    //   id: 2,
-    //   title: "Restaurant",
-    //   img: `${}`,
-    //   gitHub: "https://github.com/NatasaIc/react-ts-sass-restaurant.git",
-    // },
-    // {
-    //   id: 3,
-    //   title: "Todo List",
-    //   img: `${Todo}`,
-    //   github_url: "https://github.com/NatasaIc/react-typescript-todo.git",
-    // },
-    // {
-    //   id: 4,
-    //   title: "Zoo",
-    //   img: `${Zoo}`,
-    //   github_url: "https://github.com/NatasaIc/React-Ts-Bootstrap-Zoo.git",
-    // },
     {
       id: 5,
       title: "Hangman Game",

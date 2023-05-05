@@ -1,6 +1,6 @@
-import './Projects.scss';
+import "./Projects.scss";
 import { AiOutlineLink } from "@react-icons/all-files/ai/AiOutlineLink";
-import * as projectData from '../../data/data';
+import * as projectData from "../../data/data";
 
 function Projects() {
     const project = projectData.getAllProjects();
@@ -17,7 +17,7 @@ function Projects() {
                         <div key={projectData.id} className="card">
                             <div className="card__side card__side--front">
                                 <div className="card__picture card__picture--1" >
-                                    <div className='image' style={{ backgroundImage:  `url(${projectData.img})`, WebkitBackgroundSize: "cover"}}></div>
+                                    <div className="image" style={{ backgroundImage:  `url(${projectData.img})`, WebkitBackgroundSize: "cover"}}></div>
                                 </div>
                                 <h4 className="card__heading">
                                     <span className="card__heading-span card__heading-span--1">{projectData.title}</span>

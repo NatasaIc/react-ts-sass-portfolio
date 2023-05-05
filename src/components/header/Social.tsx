@@ -1,6 +1,5 @@
-import React from "react";
-import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
-import { FaTelegramPlane } from 'react-icons/fa';
+import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
 
 function Social() {
   return (

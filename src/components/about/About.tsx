@@ -1,19 +1,19 @@
-import './About.scss';
-import '../../App.scss';
+import "./About.scss";
+import "../../App.scss";
 
 export default function About() {
   return (
     <>
-    <section className='section-about' id="about">
-    <div className='u-center-text  u-margin-bottom-medium'>
-      <h2 className='heading-secondary heading-about'>
+    <section className="section-about" id="about">
+    <div className="u-center-text  u-margin-bottom-medium">
+      <h2 className="heading-secondary heading-about">
         A litle somthing about me
       </h2>
     </div>
 
-    <div className='row'>
-      <div className='col-1-of-2'>
-        <p className='paragraph paragraph-about'>
+    <div className="row">
+      <div className="col-1-of-2">
+        <p className="paragraph paragraph-about">
         I'm a web developer student at Medieinstitutet. The program lasts 2 years. 
          I will have knowledge in 
          HTML, CSS/SCSS, JavaScript, TypeScript, React, 
