@@ -6,11 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100vh;
     background: linear-gradient(to right bottom,
                 rgba(v.$color-offblack, 1),
                 rgba(v.$color-offblack, 0.8));
-                
 
 
 .container {
@@ -19,9 +18,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+
     .heading-secondary {
-    @include m.xl {
-    padding: 0;
+    @include m.respond(phone) {
+        margin-bottom: 2rem;
     }
     }
 

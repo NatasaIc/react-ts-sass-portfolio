@@ -5,7 +5,6 @@ import * as projectData from "../../data/data";
 function Projects() {
     const project = projectData.getAllProjects();
   return (
-    <>
              <section className="section-projects" id="projects">
                 <div className="u-center-text">
                     <h2 className="heading-secondary">
@@ -43,7 +42,6 @@ function Projects() {
                         ))}
                     </div>
             </section>
-    </>
   )
 }
 

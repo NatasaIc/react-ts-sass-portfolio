@@ -5,35 +5,44 @@
     padding-top: 25rem;
     margin-top: -15rem;
     background-color: v.$color-grey-light-1;
+    @include m.respond(tab-port) {
+    margin-top: -10rem;
+    }
 }
 
 .col-1-of-3 {
     position: relative;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, 350px);
+    grid-template-columns: repeat(2, 600px);
     column-gap: 1rem;
 
-    @include m.md {
-    grid-template-columns: repeat(1, 450px);
-    padding: 5rem;
-    }
-    @include m.lg {
-    grid-template-columns: repeat(2, 450px);
-    }
-    @include m.xl {
-    grid-template-columns: repeat(2, 600px);
-    }
+@include m.respond(tab-land) {
+grid-template-columns: repeat(2, 500px);
+}
+@include m.respond(tab-port) {
+grid-template-columns: repeat(2, 400px);
+}
+
+@include m.respond(phone) {
+    grid-template-columns: repeat(1, 350px);
+}
+
+
 }
 .card {
     position: relative;
     height: 55vh;
-    // width: calc((100% - 3 * #{v.$gutter-horizontal}) / 1);
     margin: 3rem;
-    
+    @include m.respond(phone) {
+    height: 350px;
+    }
 
     &:last-child {
         margin-bottom: 25rem;
+        @include m.respond(tab-port) {
+        margin-bottom: 10rem;
+        }
     }
     &__side {
         color: #fff;
@@ -127,6 +136,9 @@
 
                 &:not(:last-child) {
                     border-bottom: 1px solid v.$color-grey-light-2;
+                }
+                @include m.respond(phone) {
+                    font-size: 1.5rem;
                 }
             }
         }

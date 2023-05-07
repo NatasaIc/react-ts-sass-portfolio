@@ -9,26 +9,27 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 30%;
-        left: 8%;
+        top: 35%;
+        left: 10%;
       }
     
       &__social-icon {
-        margin-left: 3.5rem;
         margin-bottom: 10rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #000;
         justify-content: space-evenly;
-        
         &:hover {
           color: v.$color-tertiary-light;
+        }
+        @include m.respond(phone) {
+          font-size: 3rem;
         }
       }
 
     &__img {
         position: absolute;
-        top: 25%;
-        left: 50%;
+        top: 50%;
+        left: 80%;
         transform: translate(-50%, -50%);
         background: url(../../assets/natasa-yellow.PNG);
         background-repeat: no-repeat;
@@ -37,27 +38,32 @@
         box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
         order: 1;
         justify-self: center;
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         animation: profile__animation 8s ease-in-out infinite 1s;
         &:hover{
-          box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+          box-shadow: 1px 1px 10p
+          x 0 rgba(0, 0, 0, .1);
         }
-        @include m.sm {
-          width: 150px;
-          height: 150px;
-        }
-        @include m.lg {
-          top: 50%;
-          left: 80%;
+
+      
+        @include m.respond(tab-land) {
           width: 250px;
           height: 250px;
         }
-        @include m.xl {
-          width: 300px;
-          height: 300px;
+        @include m.respond(tab-port) {
+          top: 45%;
+          width: 200px;
+          height: 200px;
         }
-        
+        @include m.respond(phone) {
+          top: 25%;
+          left: 50%;
+          width: 150px;
+          height: 150px;
+        }
+        @include m.respond(big-desktop) {
+        }
     }
 
     &__text-box {
@@ -65,10 +71,19 @@
         top: 40%;
         left: 20%;
         text-align: left;
-        @include m.sm {
+        @include m.respond(tab-land) {
+        }
+
+        @include m.respond(tab-port) {
+          top: 35%;
+        }
+        @include m.respond(phone) {
           top: 40%;
         }
+        @include m.respond(big-desktop) {
+        }
     }
+
 }
 
 
@@ -90,36 +105,39 @@
 
     &--main {
         display: block;
-        font-size: 2.5rem;
+        font-size: 4.5rem;
         font-weight: 600;
         letter-spacing: 0.5rem;
         margin-bottom: 2rem;
         padding-right: 2rem;
-        @include m.md {
-          font-size: 3.5rem;
+        @include m.respond(tab-port) {
+          font-size: 4rem;
+        }
+        @include m.respond(phone) {
+          letter-spacing: 0;
+          font-size: 4rem;
         }
     }
 
     &--sub {
         display: block;
-        font-size: 1.3rem;
         font-weight: 300;
         letter-spacing: 0.1rem;
         margin-right: 3rem;
-        word-spacing: 0.5rem;
-
-        @include m.md {
-        padding-right: 5rem;
-        font-size: 2rem;
+        word-spacing: 0.3rem;
+        @include m.respond(tab-land) {
+          padding-right: 45rem;
         }
-        @include m.lg {
-          padding-right: 30rem;
+        @include m.respond(tab-port) {
+          padding-right: 35rem;
         }
-        @include m.xl {
-          padding-right: 44rem;
+        @include m.respond(phone) {
+          letter-spacing: 0;
+          font-size: 2rem;
+          padding-right: 0;
         }
-        @include m.xxl {
-          padding-right: 65rem;
+        @include m.respond(big-desktop) {
+          padding-right: 50rem;
         }
     }
 }

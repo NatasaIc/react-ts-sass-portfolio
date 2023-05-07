@@ -2,7 +2,6 @@
 @use "../../styles/mixins" as m;
 
 .section-about {
-  width: inherit;
   background-image: linear-gradient(to right bottom,
       rgba(v.$color-offblack, 1),
       rgba(v.$color-offblack, 0.7));
@@ -12,37 +11,30 @@
   margin-top: -13rem;
   transform: skewY(-7deg);
   
-
-
   &>* {
     transform: skewY(7deg);
   }
 
-    .telegram-social {
-      color: white;
-      font-size: 3rem;
-      cursor: pointer;
-      margin-top: 3rem;
-    &:hover {
-      color: v.$color-tertiary-light;
-    }
-    }
-
-
 .paragraph-about{
   word-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0 50rem;
+  
+    @include m.respond(tab-land) {
+      padding: 0 25rem;
+    }
 
-  @include m.md {
-    padding: 0 10rem;
-  }
-  @include m.lg {
+    @include m.respond(tab-port) {
+    font-size: 2.5rem;
     padding: 0 20rem;
-  }
-  @include m.xl {
-   padding: 0 30rem;
-  }
-  @include m.xxl {
-    padding: 0 50rem;
-  }
+    }
+  
+    @include m.respond(phone) {
+      padding: 0 5rem;
+    }
+  
+    @include m.respond(big-desktop) {
+      padding: 0 35rem;
+    }
 }
 }

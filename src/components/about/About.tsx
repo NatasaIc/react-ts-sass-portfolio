@@ -3,7 +3,6 @@ import "../../App.scss";
 
 export default function About() {
   return (
-    <>
     <section className="section-about" id="about">
     <div className="u-center-text  u-margin-bottom-medium">
       <h2 className="heading-secondary heading-about">
@@ -32,6 +31,5 @@ export default function About() {
       </div>
     </div>
 </section>
-</>
   )
 }

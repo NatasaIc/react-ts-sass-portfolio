@@ -1,5 +1,7 @@
 @use "./styles/variables" as v;
 @use "./styles/mixins" as m;
+@use "./styles/typography";
+@use "./styles/button";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 *,
@@ -11,16 +13,25 @@ box-sizing: inherit;
 }
 
 
+html {
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+    
+    @include m.respond(tab-land) {
+      font-size: 56.25%; // 1rem = 9px; 8/16 = 56.25%
+    }
+    @include m.respond(tab-port) {
+      font-size: 50%; // 1rem = 8px; 8/16 = 50%
+    }
+    @include m.respond(big-desktop) {
+      font-size: 75%; // 1rem = 12; 12/16 = 75%
+    }
+}
 
-html, body {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
+body {
   box-sizing: border-box;
-  color: v.$color-light-grey;
-  overflow-x: hidden;
-  @include m.md {
-    padding: 3rem;
+  padding: 3rem;
+  @include m.respond(tab-port) {
+    padding: 0;
   }
 }
 
@@ -58,91 +69,3 @@ a {
   margin-top: v.$margin-top-huge !important;
 }
 
-/**********TYPOGRAPHY**********/
-.heading-secondary {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  letter-spacing: 1.5px;
-  margin-bottom: 2rem;
-}
-
-.heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.paragraph {
-  font-size: 1.6rem;
-  &:not(:last-child) {
-      margin-bottom: 2rem;
-  }
-}
-
-
-/**********BUTTON**********/
-.btn {
-  &,
-  &:link,
-  &:visited {
-    text-decoration: none;
-    padding: 1rem 3rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    position: relative;
-    font-size: 1.5rem;
-
-    //Change for the <button> element
-    border: none;
-    cursor: pointer;
-  }
-
-  &:hover:not(&--blue) {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
-    &::after {
-      transform: scaleX(1.2) scaleY(1);
-      opacity: 1;
-    }
-  }
-
-  &:active,
-  &:focus:not(&--blue) {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  }
-
-  &--dark {
-    margin-top: 2rem;
-    margin-left: 5rem;
-    background: v.$color-grey-light-2;
-    color: v.$color-tertiary-light;
-    &:hover {
-      color: v.$color-grey-light-2;
-      background: v.$color-offblack;
-    }
-  }
-
-  &--white {
-    color: v.$color-offwhite;
-    &:hover {
-      background: v.$color-grey-light-1;
-      color: v.$color-tertiary-light;
-    }
-  }
-
-  &--blue {
-    float: right;
-    color: v.$color-offblack;
-    border-style: none;
-    border: 1px solid v.$color-tertiary-light;
-    background-color: transparent;
-    &:hover {
-      color: v.$color-tertiary-light;
-    }
-  }
-}

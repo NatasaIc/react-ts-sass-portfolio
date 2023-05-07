@@ -3,7 +3,6 @@ import Social from "./Social";
 
 function Header() {
   return (
-    <>
     <header className="header" id="home">
     <Social />
     <div className="header__img"></div>
@@ -15,7 +14,6 @@ function Header() {
             <a href="https://github.com/NatasaIc/fullstack-applikation-express.git" className="btn btn--dark">Download CV</a>
         </div>
     </header>
-    </>
   )
 }
 

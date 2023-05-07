@@ -3,7 +3,6 @@ import "./Nav.scss";
 const Nav = () => {
 
   return (
-    <>
     <div className="navigation">
             {/* <input type="checkbox" className="navigation__checkbox" id="navi-toggle" />
             <label htmlFor="navi-toggle" className="navigation__button">
@@ -19,7 +18,6 @@ const Nav = () => {
                 </ul>
             </nav>
         </div>
-    </>
   )
 }
 
