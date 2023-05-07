@@ -2,7 +2,7 @@
 @use "../../styles/mixins" as m;
 
 .section-projects {
-    padding-top: 25rem;
+    padding-top: 30rem;
     margin-top: -15rem;
     background-color: v.$color-grey-light-1;
     @include m.respond(tab-port) {
@@ -19,13 +19,16 @@
 
 @include m.respond(tab-land) {
 grid-template-columns: repeat(2, 500px);
+gap: 3rem;
 }
 @include m.respond(tab-port) {
 grid-template-columns: repeat(2, 400px);
 }
-
 @include m.respond(phone) {
-    grid-template-columns: repeat(1, 350px);
+grid-template-columns: repeat(1, 350px);
+}
+@include m.respond(big-desktop) {
+gap: 6rem;
 }
 
 
@@ -33,9 +36,8 @@ grid-template-columns: repeat(2, 400px);
 .card {
     position: relative;
     height: 55vh;
-    margin: 3rem;
     @include m.respond(phone) {
-    height: 350px;
+    height: 400px;
     }
 
     &:last-child {
