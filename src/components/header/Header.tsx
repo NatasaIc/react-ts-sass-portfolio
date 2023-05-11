@@ -11,7 +11,7 @@ function Header() {
                 <span className="heading-primary--main">Natasa Iconomou</span>
                 <span className="heading-primary--sub"> I'm a Software developer student.</span>
             </h1>
-            <a href="https://medieinstitutet-my.sharepoint.com/personal/natasa_iconomou_medieinstitutet_se/Documents/Microsoft%20Teams%20chattfiler/NatasaIconomou-cv-letter_pdf.pdf" className="btn btn--dark">Download CV</a>
+            <a href="https://medieinstitutet-my.sharepoint.com/personal/natasa_iconomou_medieinstitutet_se/Documents/Microsoft%20Teams%20chattfiler/NatasaIconomou-cv-letter_pdf.pdf" className="btn btn--dark">View CV</a>
         </div>
     </header>
   )
