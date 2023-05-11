@@ -111,7 +111,7 @@
         margin-bottom: 2rem;
         padding-right: 2rem;
         @include m.respond(tab-port) {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
         @include m.respond(phone) {
           letter-spacing: 0;

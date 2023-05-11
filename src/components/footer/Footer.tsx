@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="row">
                 <div className="col-1-of-2">
                     <div className="footer__icons">
-                        <p className="paragraph p-footer">Web Developer Student</p>
+                        <p className="p-footer">Web Developer Student</p>
                     <div className="footer__icons">
                     <Link
                         to="https://github.com/NatasaIc"
@@ -32,9 +32,6 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-1-of-2">
-                    <div className="email">
-                    <p><strong>contact:</strong> iconomou.ng@gmail.com</p>
-                    </div>
                     <p className="footer__copyright">
                     &copy; <a href="#about" className="footer__link">Natasa Iconomou</a> 2023
                     </p>

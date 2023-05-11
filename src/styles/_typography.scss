@@ -20,7 +20,7 @@
         margin-bottom: 8rem;
         }
         @include m.respond(phone) {
-          font-size: 3.5rem;
+          font-size: 3rem;
         }
     }
   
@@ -37,3 +37,15 @@
         margin-bottom: 2rem;
       }
     }
+    
+    .heading-about {
+      margin-top: 20%;
+    }
+
+    .paragraph-about {
+      
+      line-height: 2rem;
+      word-spacing: 0.3rem;
+      letter-spacing: 0.1rem;
+      text-align: left;
+}

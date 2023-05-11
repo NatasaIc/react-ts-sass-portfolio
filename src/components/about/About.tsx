@@ -12,7 +12,7 @@ export default function About() {
 
     <div className="row">
       <div className="col-1-of-2">
-        <p className="paragraph paragraph-about">
+        <p className="paragraph paragraph-about cutoff-text">
         I'm a web developer student at Medieinstitutet. The program lasts 2 years. 
          I will have knowledge in 
          HTML, CSS/SCSS, JavaScript, TypeScript, React, 
@@ -28,6 +28,7 @@ export default function About() {
          If you run a company or work for a company that is 
          looking for interns do not hesitate to get in touch.
         </p>
+        <input type="checkbox" className="expand-btn"/>
       </div>
     </div>
 </section>

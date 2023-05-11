@@ -1,4 +1,5 @@
 import "./Contact.scss";
+import "../../styles/_button.scss";
 import { useState, useRef, FormEvent} from "react";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
@@ -37,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-     <section className="section-contact" id="contact">
+    <section className="section-contact" id="contact">
     <div className="container">
         <div className="text-zone">
             <h1 className="heading-secondary">
@@ -56,10 +57,10 @@ const Contact = () => {
                       <input type="email" name="email" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} required />
                   </li>
                   <li>
-                    <textarea placeholder="Message" name="message" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
+                    <textarea name="message" placeholder="Message" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
                   </li>
                   <li>
-                    <input type="submit" className="flat-button btn btn--blue" value="SEND" /> 
+                    <input type="submit" className="btn btn--withe" value="SEND" /> 
                   </li>
                 </ul>
               </form>
