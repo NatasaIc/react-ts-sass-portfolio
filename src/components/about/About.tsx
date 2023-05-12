@@ -13,10 +13,10 @@ export default function About() {
     <div className="row">
       <div className="col-1-of-2">
         <p className="paragraph paragraph-about cutoff-text">
-          I'm a web developer student at Medieinstitutet. The program lasts 2 years. 
+         I'm a web developer student at Medieinstitutet. The program lasts two years. 
          I will have knowledge in 
-         HTML, CSS/SCSS, JavaScript, TypeScript, React, 
-         Database, Git, Node.js and PHP.
+         HTML, CSS/SCSS, Javascript (with React), TypeScript, 
+         SQL, Node.js and PHP.
          Currently in a state of improving and obtaining the necessary 
          skills for me to become the best developer possible.
          My philosophy has always been,
@@ -26,7 +26,8 @@ export default function About() {
          LIA 1: 2023-10-16 to 2023-12-24<br />
          LIA 2: 2024-02-05 to 2024-05-19<br /> <br />
          If you run a company or work for a company that is 
-         looking for interns do not hesitate to get in touch.
+         looking for interns, you are welcome to contact me for more information 
+         or to discuss possible opportunities.
         </p>
         <input type="checkbox" className="expand-btn"/>
       </div>
