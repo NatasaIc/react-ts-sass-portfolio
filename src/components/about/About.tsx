@@ -24,7 +24,7 @@ export default function About() {
          key to my practice.<br /><br />
          I am applying for LIA internship for the following periods:<br />
          LIA 1: 2023-10-16 to 2023-12-24<br />
-         LIA 2: 2024-02-05 to 2024-05-19<br /> <br />
+         LIA 2: 2024-02-05 to 2024-05-19 <br /><br />
          If you run a company or work for a company that is 
          looking for interns, you are welcome to contact me for more information 
          or to discuss possible opportunities.
