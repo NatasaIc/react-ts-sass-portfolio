@@ -53,8 +53,9 @@
     }
 
     .expand-btn {
+      appearance: none;
       background-color: transparent;
-      // padding: 2rem;
+      padding: 2rem;
       cursor: pointer;
       margin-top: 3rem;
       text-align: left;
