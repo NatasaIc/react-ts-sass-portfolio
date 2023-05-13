@@ -6,7 +6,7 @@ export default function About() {
     <section className="section-about" id="about">
     <div className="u-center-text  u-margin-bottom-medium">
       <h2 className="heading-secondary heading-about">
-        A little somthing about me
+        About me
       </h2>
     </div>
 
