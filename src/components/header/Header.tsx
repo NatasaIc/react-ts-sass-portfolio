@@ -11,7 +11,7 @@ function Header() {
                 <span className="heading-primary--main">Natasa Iconomou</span>
                 <span className="heading-primary--sub"> I'm a Software developer student.</span>
             </h1>
-            <a href="https://drive.google.com/file/d/1W3IN5AVHLg92L4Y-u1nn6MeXb1qeiJbo/view?usp=share_link" className="btn btn--dark">View CV</a>
+            <a href="https://drive.google.com/file/d/11IcRsIGlyRo0OFrTMNq3NKsKHtp1brlf/view?usp=sharing" className="btn btn--dark">View CV</a>
         </div>
     </header>
   )
